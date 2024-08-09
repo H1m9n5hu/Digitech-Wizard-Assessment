@@ -1,0 +1,42 @@
+.right-margin {
+  margin-right: 0.7rem;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #a67c00;
+  color: white;
+  height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.sidebar li .menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.dropdown-icon {
+  margin-left: auto;
+}
+
+.submenu {
+  padding-left: 20px;
+}
+.submenu li{
+  padding-left: 30px;
+}
