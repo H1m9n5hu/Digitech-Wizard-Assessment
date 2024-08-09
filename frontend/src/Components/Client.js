@@ -22,7 +22,7 @@ function Client() {
   const fetchClients = async () => {
     try {
       const token = localStorage.getItem('token'); 
-      const response = await axios.get('http://localhost:8080/client/getClients', {
+      const response = await axios.get('https://digitech-wizard-api.vercel.app/client/getClients', {
         headers: {
           'Authorization': token 
         }
@@ -37,13 +37,13 @@ function Client() {
     try {
       const token = localStorage.getItem('token');
       if (editClientData) {
-        await axios.put(`http://localhost:8080/client/editClient/${editClientData._id}`, clientData, {
+        await axios.put(`https://digitech-wizard-api.vercel.app/client/editClient/${editClientData._id}`, clientData, {
           headers: {
             'Authorization': token
           }
         });
       } else {
-        await axios.post('http://localhost:8080/client/addClient', clientData, {
+        await axios.post('https://digitech-wizard-api.vercel.app/client/addClient', clientData, {
           headers: {
             'Authorization': token
           }
@@ -80,7 +80,7 @@ function Client() {
     try {
       const token = localStorage.getItem('token');
 
-      await axios.put(`http://localhost:8080/client/withdrawExpo/${selectedClient._id}`, 
+      await axios.put(`https://digitech-wizard-api.vercel.app/client/withdrawExpo/${selectedClient._id}`, 
         { amount }, 
         {
         headers: {
