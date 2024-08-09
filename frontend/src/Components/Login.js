@@ -17,7 +17,7 @@ const Login = () => {
         return handleError('Email and Password all are required');
     }
     axios
-      .post("http://localhost:8080/auth/login", { email, password })
+      .post("https://digitech-wizard-api.vercel.app/auth/login", { email, password })
       .then((response) => {
         const result = response.data;
         const { success, message, jwtToken, name } = result;
