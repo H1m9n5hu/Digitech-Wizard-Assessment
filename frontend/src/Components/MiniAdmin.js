@@ -19,7 +19,7 @@ function MiniAdmin() {
   const fetchAdmin = async () => {
     try {
       const token = localStorage.getItem('token'); 
-      const response = await axios.get('http://localhost:8080/miniAdmin/getMiniAdmins', {
+      const response = await axios.get('https://digitech-wizard-api.vercel.app/miniAdmin/getMiniAdmins', {
         headers: {
           'Authorization': token 
         }
@@ -34,13 +34,13 @@ function MiniAdmin() {
     try {
       const token = localStorage.getItem('token');
       if (editAdminData) {
-        await axios.put(`http://localhost:8080/miniAdmin/editMiniAdmin/${editAdminData._id}`, adminData, {
+        await axios.put(`https://digitech-wizard-api.vercel.app/miniAdmin/editMiniAdmin/${editAdminData._id}`, adminData, {
           headers: {
             'Authorization': token
           }
         });
       } else {
-        await axios.post('http://localhost:8080/miniAdmin/addMiniAdmin', adminData, {
+        await axios.post('https://digitech-wizard-api.vercel.app/miniAdmin/addMiniAdmin', adminData, {
           headers: {
             'Authorization': token
           }
